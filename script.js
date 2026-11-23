@@ -4,7 +4,7 @@ const DEFAULT_LESSONS = [
     title: 'Aula 01: Bem-vindas ao Projeto Aurora & STEM Racing',
     category: 'Introdução',
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    content: `Nesta primeira aula, apresentamos a missão do Projeto Aurora em parceria com a Equipe NitroNeedles e nossa associação parceira.\n\nO que você vai aprender:\n1. Como funciona o desafio STEM Racing e o papel da engenharia aplicada.\n2. Por que o protagonismo feminino transforma equipes de tecnologia.\n3. Como utilizar esta plataforma para acompanhar seu progresso e tirar dúvidas.\n\nDica: Ao terminar de ler, responda às duas perguntas abaixo para registrar seu entendimento!`,
+    content: `Nesta primeira aula, apresentamos a missão do Projeto Aurora em parceria com a Equipe Nitroneedles e nossa associação parceira.\n\nO que você vai aprender:\n1. Como funciona o desafio STEM Racing e o papel da engenharia aplicada.\n2. Por que o protagonismo feminino transforma equipes de tecnologia.\n3. Como utilizar esta plataforma para acompanhar seu progresso e tirar dúvidas.\n\nDica: Ao terminar de ler, responda às duas perguntas abaixo para registrar seu entendimento!`,
     questions: [
       'Qual foi o ponto que mais chamou sua atenção sobre o Projeto Aurora?',
       'Você já teve contato com algum projeto de ciência ou engenharia antes? Ficou alguma dúvida?'
@@ -121,7 +121,7 @@ function injectSharedModals() {
       <div class="modal-card">
         <div class="modal-badges">
           <span class="badge badge-blue">Projeto Aurora</span>
-          <span class="badge badge-orange">NitroNeedles</span>
+          <span class="badge badge-orange">Nitroneedles</span>
           <span class="badge badge-purple">Associação</span>
         </div>
         <h2>Bem-vinda ao Projeto Aurora</h2>
@@ -148,7 +148,7 @@ function injectSharedModals() {
             <select id="vis-source" required>
               <option value="">Selecione uma opção...</option>
               <option value="Casa de Abigail">Casa de Abigail</option>
-              <option value="Equipe NitroNeedles">Equipe NitroNeedles</option>
+              <option value="Equipe Nitroneedles">Equipe Nitroneedles</option>
               <option value="Amigos">Amigos</option>
               <option value="Família">Família</option>
               <option value="Outros">Outros</option>
@@ -168,7 +168,7 @@ function injectSharedModals() {
           <div class="cert-logos">
             <span>PROJETO AURORA</span>
             <span>•</span>
-            <span>EQUIPE NITRONEEDLES</span>
+            <span>EQUIPE Nitroneedles</span>
             <span>•</span>
             <span>ASSOCIAÇÃO PARCEIRA</span>
           </div>
@@ -182,7 +182,7 @@ function injectSharedModals() {
           <p id="cert-date" class="cert-date"></p>
           <div class="cert-signatures">
             <div><div class="sig-line"></div><span>Coordenação Projeto Aurora</span></div>
-            <div><div class="sig-line"></div><span>Equipe NitroNeedles</span></div>
+            <div><div class="sig-line"></div><span>Equipe Nitroneedles</span></div>
           </div>
         </div>
         <div class="cert-actions no-print">
