@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Aurora | Painel da Equipe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="brand-area">
+        <div class="logo-placeholder" title="Logo Projeto Aurora">PA</div>
+        <div>
+          <strong class="brand-title">Projeto Aurora</strong>
+          <span class="brand-sub">NitroNeedles • STEM Racing</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre & Objetivos</a>
+        <a href="cursos.html">Área de Estudos</a>
+        <a href="depoimentos.html">Depoimentos</a>
+        <button type="button" id="open-profile-btn" class="btn-nav-outline">Meu Perfil</button>
+        <a href="admin.html" class="btn-nav-admin active">Painel Equipe</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-banner">
+    <div class="container">
+      <span class="pill pill-orange">Área Restrita</span>
+      <h1>Painel Administrativo da Equipe</h1>
+      <p>Gerencie aulas publicadas gradualmente e acompanhe o retorno das alunas.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <!-- TELA DE ACESSO DA EQUIPE -->
+      <div id="admin-login-box" class="admin-login-card">
+        <h3>Acesso Restrito à Equipe</h3>
+        <p class="muted">Digite a senha administrativa para publicar ou remover materiais.</p>
+        <form id="admin-login-form" style="margin-top: 1rem;">
+          <div class="form-group">
+            <label for="admin-pin-input">Senha da Equipe (padrão: aurora2026)</label>
+            <input type="password" id="admin-pin-input" required placeholder="Digite a senha...">
+          </div>
+          <button type="submit" class="btn btn-blue full-width" style="margin-top: 0.85rem;">Entrar no Painel</button>
+        </form>
+      </div>
+
+      <!-- DASHBOARD LIBERADO -->
+      <div id="admin-dashboard" class="hidden">
+        <div style="display: flex; justify-content: flex-end; margin-bottom: 1rem;">
+          <button type="button" id="admin-logout-btn" class="btn btn-outline-blue">Bloquear Painel</button>
+        </div>
+
+        <div class="admin-grid">
+          <div class="admin-card">
+            <h3>Publicar Nova Aula</h3>
+            <form id="new-lesson-form" class="form-grid">
+              <div class="form-group full-width">
+                <label for="adm-title">Título da Aula *</label>
+                <input type="text" id="adm-title" required placeholder="Ex: Aula 03 - Aerodinâmica Básica">
+              </div>
+              <div class="form-group">
+                <label for="adm-cat">Categoria / Trilha *</label>
+                <input type="text" id="adm-cat" required placeholder="Ex: Engenharia & Design">
+              </div>
+              <div class="form-group">
+                <label for="adm-video">Link do Vídeo (YouTube) *</label>
+                <input type="url" id="adm-video" required placeholder="https://www.youtube.com/watch?v=...">
+              </div>
+              <div class="form-group full-width">
+                <label for="adm-text">Material Escrito (Texto da página) *</label>
+                <textarea id="adm-text" rows="5" required placeholder="Escreva aqui o resumo teórico e os tópicos da aula..."></textarea>
+              </div>
+              <div class="form-group full-width">
+                <label for="adm-q1">Pergunta de Fixação 1 *</label>
+                <input type="text" id="adm-q1" required placeholder="Ex: Qual foi o principal conceito desta aula?">
+              </div>
+              <div class="form-group full-width">
+                <label for="adm-q2">Pergunta de Fixação 2 (Dúvidas)</label>
+                <input type="text" id="adm-q2" placeholder="Ex: Qual parte você gostaria de rever na prática?">
+              </div>
+              <button type="submit" class="btn btn-orange full-width">Publicar Aula no Site</button>
+            </form>
+          </div>
+
+          <div class="admin-card">
+            <h3>Aulas Publicadas</h3>
+            <div id="admin-lessons-list" class="admin-list"></div>
+
+            <hr class="divider">
+            <h3>Visitantes / Alunas Registradas</h3>
+            <div id="admin-visitors-list" class="admin-list"></div>
+
+            <hr class="divider">
+            <h3>Respostas das Perguntas de Fixação</h3>
+            <div id="admin-responses-list" class="admin-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Projeto Aurora</strong> • Iniciativa Social Equipe NitroNeedles & Associação Parceira</p>
+      <p><small>Desenvolvido para capacitação feminina em STEM.</small></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Aurora | Área de Estudos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="brand-area">
+        <div class="logo-placeholder" title="Logo Projeto Aurora">PA</div>
+        <div>
+          <strong class="brand-title">Projeto Aurora</strong>
+          <span class="brand-sub">NitroNeedles • STEM Racing</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre & Objetivos</a>
+        <a href="cursos.html" class="active">Área de Estudos</a>
+        <a href="depoimentos.html">Depoimentos</a>
+        <button type="button" id="open-profile-btn" class="btn-nav-outline">Meu Perfil</button>
+        <a href="admin.html" class="btn-nav-admin">Painel Equipe</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-banner">
+    <div class="container">
+      <span class="pill pill-purple">Trilha de Aprendizado</span>
+      <h1>Aulas e Materiais de Apoio</h1>
+      <p>Assista ao vídeo, leia o conteúdo escrito, responda às perguntas de fixação e marque a aula como concluída.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="lms-layout">
+        <!-- BARRA LATERAL DE MÓDULOS E PROGRESSO -->
+        <aside class="course-sidebar">
+          <div class="sidebar-progress">
+            <div class="progress-info">
+              <span id="progress-text">0 de 0 aulas concluídas</span>
+              <strong id="progress-percent">0%</strong>
+            </div>
+            <div class="progress-bar dark-track">
+              <div id="progress-fill" class="progress-fill" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <div class="sidebar-header">
+            <h3>Módulos Publicados</h3>
+            <span id="module-count-badge" class="badge badge-blue">0 aulas</span>
+          </div>
+
+          <div id="lesson-list" class="lesson-list"></div>
+
+          <div class="certificate-box">
+            <h4>Certificado de Conclusão</h4>
+            <p>Ao concluir 100% das aulas publicadas, seu certificado é liberado automaticamente.</p>
+            <button type="button" id="sidebar-cert-btn" class="btn btn-orange full-width" disabled>
+              Emitir Certificado
+            </button>
+          </div>
+        </aside>
+
+        <!-- ÁREA PRINCIPAL DA AULA -->
+        <main class="lesson-viewer">
+          <div class="lesson-top">
+            <div>
+              <span id="lesson-category" class="badge badge-purple">Módulo</span>
+              <h2 id="lesson-title">Selecione uma aula para começar</h2>
+            </div>
+            <button type="button" id="mark-complete-btn" class="btn btn-outline-blue">
+              Marcar como Concluída
+            </button>
+          </div>
+
+          <div class="video-container">
+            <iframe id="lesson-video" src="" title="Vídeo da Aula" frameborder="0" allowfullscreen></iframe>
+          </div>
+
+          <div class="reading-card">
+            <h3>Material Escrito de Apoio</h3>
+            <div id="lesson-content" class="lesson-text"></div>
+          </div>
+
+          <div class="quiz-card">
+            <h3>Perguntas sobre a Aula (Fixação e Entendimento)</h3>
+            <p class="muted">Responda para nos ajudar a saber o que você aprendeu e onde ficou alguma dúvida.</p>
+            <form id="lesson-quiz-form">
+              <div id="quiz-questions-container"></div>
+              <button type="submit" class="btn btn-purple">Enviar Respostas da Aula</button>
+              <span id="quiz-feedback-msg" class="feedback-inline"></span>
+            </form>
+          </div>
+
+          <div class="comments-card">
+            <h3>Dúvidas e Comentários desta Aula</h3>
+            <form id="comment-form">
+              <textarea id="comment-input" rows="3" required placeholder="Ficou com alguma dúvida sobre este conteúdo? Escreva aqui para a equipe..."></textarea>
+              <button type="submit" class="btn btn-blue" style="margin-top: 0.65rem;">Publicar Dúvida / Comentário</button>
+            </form>
+            <div id="comments-list" class="comments-list"></div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Projeto Aurora</strong> • Iniciativa Social Equipe NitroNeedles & Associação Parceira</p>
+      <p><small>Desenvolvido para capacitação feminina em STEM.</small></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
