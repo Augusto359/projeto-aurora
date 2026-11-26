@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Aurora | Entrar ou Cadastrar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="brand-area">
+        <div class="logo-placeholder" title="Logo Projeto Aurora">PA</div>
+        <div>
+          <strong class="brand-title">Projeto Aurora</strong>
+          <span class="brand-sub">NitroNeedles • STEM Racing</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre & Objetivos</a>
+        <a href="cursos.html">Área de Estudos</a>
+        <a href="depoimentos.html">Depoimentos</a>
+        <button type="button" id="open-profile-btn" class="btn-nav-outline active">Entrar / Cadastrar</button>
+        <a href="admin.html" class="btn-nav-admin">Painel Equipe</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-banner">
+    <div class="container">
+      <span class="pill pill-orange">Acesso da Aluna</span>
+      <h1>Entrar ou Criar Cadastro</h1>
+      <p>Acesse sua conta para salvar seu progresso nas aulas e gerar seu certificado com CPF.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+
+      <!-- CAIXA DE LOGIN E CADASTRO (QUANDO DESLOGADA) -->
+      <div id="auth-tabs-box" class="auth-card">
+        <div class="auth-tabs">
+          <button type="button" id="tab-btn-login" class="auth-tab-btn active">Já tenho conta (Entrar)</button>
+          <button type="button" id="tab-btn-register" class="auth-tab-btn">Primeiro Acesso (Cadastrar)</button>
+        </div>
+
+        <div id="auth-message" class="auth-alert hidden"></div>
+
+        <!-- ABA 1: LOGIN -->
+        <form id="login-form" class="form-grid">
+          <div class="form-group full-width">
+            <label for="login-identifier">E-mail ou CPF *</label>
+            <input type="text" id="login-identifier" required placeholder="Digite seu e-mail ou CPF">
+          </div>
+          <div class="form-group full-width">
+            <label for="login-password">Senha *</label>
+            <input type="password" id="login-password" required placeholder="Digite sua senha">
+          </div>
+          <div class="full-width">
+            <button type="submit" class="btn btn-orange full-width">Entrar na Plataforma</button>
+          </div>
+        </form>
+
+        <!-- ABA 2: CADASTRO COMPLETO -->
+        <form id="register-form" class="form-grid hidden">
+          <div class="form-group full-width">
+            <label for="reg-name">Nome completo (sairá no certificado) *</label>
+            <input type="text" id="reg-name" required placeholder="Ex: Maria Clara Silva">
+          </div>
+          <div class="form-group">
+            <label for="reg-cpf">CPF *</label>
+            <input type="text" id="reg-cpf" required maxlength="14" inputmode="numeric" placeholder="000.000.000-00">
+          </div>
+          <div class="form-group">
+            <label for="reg-birth">Data de nascimento *</label>
+            <input type="date" id="reg-birth" required>
+          </div>
+          <div class="form-group">
+            <label for="reg-city">Cidade e País *</label>
+            <input type="text" id="reg-city" required placeholder="Ex: Valinhos, Brasil">
+          </div>
+          <div class="form-group">
+            <label for="reg-email">E-mail *</label>
+            <input type="email" id="reg-email" required placeholder="seuemail@exemplo.com">
+          </div>
+          <div class="form-group">
+            <label for="reg-source">Por onde conheceu nosso site? *</label>
+            <select id="reg-source" required>
+              <option value="">Selecione uma opção...</option>
+              <option value="Casa de Abigail">Casa de Abigail</option>
+              <option value="Equipe NitroNeedles">Equipe NitroNeedles</option>
+              <option value="Amigos">Amigos</option>
+              <option value="Família">Família</option>
+              <option value="Outros">Outros</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="reg-password">Crie uma senha *</label>
+            <input type="password" id="reg-password" required minlength="6" placeholder="Mínimo 6 caracteres">
+          </div>
+          <div class="full-width">
+            <button type="submit" class="btn btn-purple full-width">Concluir Cadastro e Entrar</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- PERFIL DA ALUNA LOGADA -->
+      <div id="logged-profile-box" class="auth-card hidden">
+        <span class="badge badge-purple">Conta Conectada</span>
+        <h2 style="color: var(--brand-blue); margin: 0.4rem 0 1rem 0;">Seus Dados Cadastrados</h2>
+        <div class="profile-summary-grid">
+          <div><small class="muted">Nome Completo</small><strong id="prof-name">—</strong></div>
+          <div><small class="muted">CPF</small><strong id="prof-cpf">—</strong></div>
+          <div><small class="muted">Data de Nascimento</small><strong id="prof-birth">—</strong></div>
+          <div><small class="muted">Cidade e País</small><strong id="prof-city">—</strong></div>
+          <div><small class="muted">E-mail</small><strong id="prof-email">—</strong></div>
+          <div><small class="muted">Como conheceu</small><strong id="prof-source">—</strong></div>
+        </div>
+        <div class="hero-buttons" style="margin-top: 1.5rem;">
+          <a href="cursos.html" class="btn btn-orange">Ir para as Aulas</a>
+          <button type="button" id="logout-btn" class="btn btn-outline-blue">Sair da Conta</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Projeto Aurora</strong> • Iniciativa Social Equipe NitroNeedles & Associação Parceira</p>
+      <p><small>Desenvolvido para capacitação feminina em STEM.</small></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
